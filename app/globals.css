@@ -1,0 +1,232 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette for cake store with red, cream, and white theme */
+  --background: #fcfcfc;
+  --foreground: #2c2c2c;
+  --card: #ffffff;
+  --card-foreground: #2c2c2c;
+  --popover: #e0ddd5;
+  --popover-foreground: #d40000;
+  /* Darkened primary color for better contrast with white text */
+  --primary: #8b0000;
+  --primary-foreground: #ffffff;
+  --secondary: #e0ddd5;
+  --secondary-foreground: #d40000;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --accent: #8b0000;
+  --accent-foreground: #ffffff;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: #e0ddd5;
+  --input: #ffffff;
+  --ring: rgba(179, 0, 0, 0.3);
+  /* Updated chart colors to match new primary */
+  --chart-1: #8b0000;
+  --chart-2: #e0ddd5;
+  --chart-3: #fcfcfc;
+  --chart-4: #b30000;
+  --chart-5: #ffffff;
+  --radius: 0.5rem;
+  --sidebar: #e0ddd5;
+  --sidebar-foreground: #d40000;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #d40000;
+  /* Updated sidebar accent to match new primary */
+  --sidebar-accent: #8b0000;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e0ddd5;
+  --sidebar-ring: rgba(212, 0, 0, 0.3);
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #fcfcfc;
+  --card: #2c2c2c;
+  --card-foreground: #fcfcfc;
+  --popover: #2c2c2c;
+  --popover-foreground: #fcfcfc;
+  /* Updated dark mode primary to match new color */
+  --primary: #8b0000;
+  --primary-foreground: #ffffff;
+  --secondary: #3c3c3c;
+  --secondary-foreground: #fcfcfc;
+  --muted: #3c3c3c;
+  --muted-foreground: #a0a0a0;
+  --accent: #8b0000;
+  --accent-foreground: #ffffff;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --border: #3c3c3c;
+  --input: #2c2c2c;
+  --ring: rgba(179, 0, 0, 0.3);
+  /* Updated dark mode chart colors */
+  --chart-1: #8b0000;
+  --chart-2: #e0ddd5;
+  --chart-3: #fcfcfc;
+  --chart-4: #b30000;
+  --chart-5: #ffffff;
+  --sidebar: #2c2c2c;
+  --sidebar-foreground: #fcfcfc;
+  --sidebar-primary: #d40000;
+  --sidebar-primary-foreground: #ffffff;
+  /* Updated dark mode sidebar accent */
+  --sidebar-accent: #8b0000;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #3c3c3c;
+  --sidebar-ring: rgba(212, 0, 0, 0.3);
+}
+
+@theme inline {
+  /* Updated font configuration to use Pacifico for headings and Inter for body */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-pacifico);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Added custom font styles for different elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  p,
+  a,
+  li,
+  span,
+  input,
+  button,
+  label,
+  div {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .journey-slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .journey-slider {
+    display: flex;
+    animation: curvedSlide 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .journey-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  @keyframes curvedSlide {
+    0% {
+      transform: translateX(0%) scale(1);
+    }
+    20% {
+      transform: translateX(0%) scale(1.02);
+    }
+    25% {
+      transform: translateX(-100%) scale(1);
+    }
+    45% {
+      transform: translateX(-100%) scale(1.02);
+    }
+    50% {
+      transform: translateX(-200%) scale(1);
+    }
+    70% {
+      transform: translateX(-200%) scale(1.02);
+    }
+    75% {
+      transform: translateX(-300%) scale(1);
+    }
+    95% {
+      transform: translateX(-300%) scale(1.02);
+    }
+    100% {
+      transform: translateX(-400%) scale(1);
+    }
+  }
+
+  .journey-slider:hover {
+    animation-play-state: paused;
+  }
+
+  /* Enhanced visual effects */
+  .journey-slider-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .journey-slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
