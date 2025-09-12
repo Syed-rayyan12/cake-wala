@@ -4,8 +4,8 @@ import Image from 'next/image'
 const perfect = () => {
   return (
     <>
-       <section className="px-6 md:px-20 py-16 bg-gray-100 rounded-2xl">
-        <h2 className="text-4xl font-bold text-center text-[#8b0000] mb-12">
+       <section className="px-14 py-16 bg-gray-100 rounded-2xl">
+        <h2 className="text-4xl font-bold text-center text-primary mb-12">
           Perfect Pairings
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -17,7 +17,7 @@ const perfect = () => {
               height={200}
               className="rounded-xl mx-auto mb-4 object-cover"
             />
-            <h3 className="text-xl font-semibold text-[#8b0000] mb-2">
+            <h3 className="text-xl font-semibold text-primary mb-2">
               Afternoon Tea
             </h3>
             <p className="text-gray-600">
@@ -27,13 +27,13 @@ const perfect = () => {
 
           <div className="bg-white p-6 rounded-2xl shadow-md">
             <Image
-              src="/kp.jpg"
+              src="/pp.jpeg"
               alt="Cake with Coffee"
               width={300}
               height={200}
-              className="rounded-xl h-[43vh] mx-auto mb-4 object-cover"
+              className="rounded-xl  mx-auto mb-4 object-cover"
             />
-            <h3 className="text-xl font-semibold text-[#8b0000] mb-2">
+            <h3 className="text-xl font-semibold text-primary mb-2">
               Coffee Moments
             </h3>
             <p className="text-gray-600">
@@ -49,7 +49,7 @@ const perfect = () => {
               height={200}
               className="rounded-xl mx-auto mb-4 object-cover"
             />
-            <h3 className="text-xl font-semibold text-[#8b0000] mb-2">
+            <h3 className="text-xl font-semibold text-primary mb-2">
               Celebrations
             </h3>
             <p className="text-gray-600">

@@ -50,7 +50,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
+        <div className="container mx-auto px-12 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
           <p className="text-muted-foreground mb-8">Add some delicious cakes to get started!</p>
           <Button asChild>
@@ -62,16 +62,16 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-12 py-8">
         <h1 className="text-3xl font-serif font-bold text-primary mb-8">Checkout</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Order Form */}
           <div className="space-y-6">
-            <Card>
+            <Card className="hover:translate-y-1 hover:border-primary/50 border transition-all duration-300">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>
@@ -83,6 +83,7 @@ export default function CheckoutPage() {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     required
+                    className="border-gray-200"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -92,6 +93,7 @@ export default function CheckoutPage() {
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
                       required
+                      className="border-gray-200"
                     />
                   </div>
                   <div>
@@ -100,6 +102,7 @@ export default function CheckoutPage() {
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
                       required
+                      className="border-gray-200"
                     />
                   </div>
                 </div>
@@ -110,12 +113,13 @@ export default function CheckoutPage() {
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     required
+                    className="border-gray-200"
                   />
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:-translate-y-1 hover:border-primary/50 border transition-all duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Truck className="h-5 w-5" />
@@ -129,12 +133,13 @@ export default function CheckoutPage() {
                     value={formData.address}
                     onChange={(e) => handleInputChange("address", e.target.value)}
                     required
+                    className="border-gray-200"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">City</label>
-                    <Input value={formData.city} onChange={(e) => handleInputChange("city", e.target.value)} required />
+                    <Input value={formData.city} onChange={(e) => handleInputChange("city", e.target.value)} required className="border-gray-100" />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">Postal Code</label>
@@ -142,6 +147,7 @@ export default function CheckoutPage() {
                       value={formData.postalCode}
                       onChange={(e) => handleInputChange("postalCode", e.target.value)}
                       required
+                      className="border-gray-200"
                     />
                   </div>
                 </div>
@@ -153,6 +159,7 @@ export default function CheckoutPage() {
                       value={formData.deliveryDate}
                       onChange={(e) => handleInputChange("deliveryDate", e.target.value)}
                       required
+                      className="border-gray-200"
                     />
                   </div>
                   <div>
@@ -161,7 +168,7 @@ export default function CheckoutPage() {
                       value={formData.deliveryTime}
                       onValueChange={(value) => handleInputChange("deliveryTime", value)}
                     >
-                      <SelectTrigger>
+                      <SelectTrigger className="border-gray-200">
                         <SelectValue placeholder="Select time" />
                       </SelectTrigger>
                       <SelectContent>
@@ -180,12 +187,13 @@ export default function CheckoutPage() {
                     value={formData.specialInstructions}
                     onChange={(e) => handleInputChange("specialInstructions", e.target.value)}
                     placeholder="Any special delivery instructions..."
+                    className="border-gray-200"
                   />
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="hover:-translate-y-1 hover:border-primary/50 border transition-all duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CreditCard className="h-5 w-5" />
@@ -197,7 +205,7 @@ export default function CheckoutPage() {
                   value={formData.paymentMethod}
                   onValueChange={(value) => handleInputChange("paymentMethod", value)}
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="border-gray-100">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -212,7 +220,7 @@ export default function CheckoutPage() {
 
           {/* Order Summary */}
           <div className="space-y-6">
-            <Card>
+            <Card className="hover:-translate-y-1 hover:border-primary/50 border transition-all duration-300">
               <CardHeader>
                 <CardTitle>Order Summary</CardTitle>
               </CardHeader>
@@ -233,7 +241,7 @@ export default function CheckoutPage() {
                           variant="outline"
                           size="sm"
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="h-6 w-6 p-0"
+                          className="h-6 w-6 p-0 hover:bg-primary"
                         >
                           <Minus className="h-3 w-3" />
                         </Button>
@@ -242,7 +250,7 @@ export default function CheckoutPage() {
                           variant="outline"
                           size="sm"
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="h-6 w-6 p-0"
+                          className="h-6 w-6 p-0 hover:bg-primary"
                         >
                           <Plus className="h-3 w-3" />
                         </Button>
@@ -252,7 +260,7 @@ export default function CheckoutPage() {
                           onClick={() => removeItem(item.id)}
                           className="h-6 w-6 p-0 text-destructive hover:text-destructive"
                         >
-                          <Trash2 className="h-3 w-3" />
+                          <Trash2 className="h-3 w-3 text-primary" />
                         </Button>
                       </div>
                     </div>

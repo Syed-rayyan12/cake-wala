@@ -10,12 +10,12 @@
   --card: #ffffff;
   --card-foreground: #2c2c2c;
   --popover: #e0ddd5;
-  --popover-foreground: #d40000;
+  --popover-foreground: #ff6b9d;
   /* Darkened primary color for better contrast with white text */
-  --primary: #8b0000;
+  --primary: #ff6b9d;
   --primary-foreground: #ffffff;
   --secondary: #e0ddd5;
-  --secondary-foreground: #d40000;
+  --secondary-foreground: #ff6b9d;
   --muted: #f8f9fa;
   --muted-foreground: #6c757d;
   --accent: #8b0000;

@@ -19,7 +19,7 @@ const story = () => {
         </p>
         <div className=''>
 
-        <Button variant="outline" className="mt-6  text-white border-none bg-[#8b0000] hover:bg-red-800 hover:text-white rounded-lg px-6 py-3 text-md cursor-pointer">
+        <Button variant="outline" className="mt-6  text-white border-none bg-primary hover:bg-primary/80 hover:text-white rounded-lg px-6 py-3 text-md cursor-pointer">
          <Link href="/about">
           Read More
          </Link>

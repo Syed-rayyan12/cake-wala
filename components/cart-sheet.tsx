@@ -53,7 +53,7 @@ export function CartSheet() {
                           variant="outline"
                           size="sm"
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="h-6 w-6 p-0"
+                          className="h-6 w-6 p-0 hover:bg-primary/80"
                         >
                           <Minus className="h-3 w-3" />
                         </Button>
@@ -62,7 +62,7 @@ export function CartSheet() {
                           variant="outline"
                           size="sm"
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="h-6 w-6 p-0"
+                          className="h-6 w-6 p-0 hover:bg-primary/80"
                         >
                           <Plus className="h-3 w-3" />
                         </Button>
@@ -70,7 +70,7 @@ export function CartSheet() {
                           variant="ghost"
                           size="sm"
                           onClick={() => removeItem(item.id)}
-                          className="h-6 w-6 p-0 text-destructive hover:text-destructive"
+                          className="h-6 w-6 p-0 text-primary hover:text-primary"
                         >
                           <Trash2 className="h-3 w-3" />
                         </Button>
@@ -93,7 +93,7 @@ export function CartSheet() {
                       Checkout
                     </Link>
                   </Button>
-                  <Button variant="outline" className="w-full bg-transparent" onClick={closeCart}>
+                  <Button variant="outline" className="w-full bg-primary hover:bg-primary/80 text-white" onClick={closeCart}>
                     Continue Shopping
                   </Button>
                 </div>

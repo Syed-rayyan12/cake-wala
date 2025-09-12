@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { ShoppingCart, Menu, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -69,8 +70,8 @@ export function Header() {
         <div className=" mx-auto px-12">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="font-serif text-2xl font-bold text-primary">
-              Cake Wala
+            <Link href="/" className="flex items-center">
+              <Image src="/Cake-logo.png" alt="Cake Wala Logo" className="object-cover" width={200} height={200} />
             </Link>
 
             {/* Desktop Navigation */}
@@ -124,7 +125,7 @@ export function Header() {
             {/* Cart and Mobile Menu */}
             <div className="flex items-center space-x-4">
               {/* Cart Button */}
-              <Button variant="outline" size="sm" onClick={openCart} className="relative bg-transparent">
+              <Button variant="outline" size="sm" onClick={openCart} className="relative bg-transparent hover:bg-primary">
                 <ShoppingCart className="h-4 w-4" />
                 {hydrated && totalItems > 0 && (
                   <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">

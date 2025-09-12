@@ -95,7 +95,7 @@ export default function ContactPage() {
       <section className="py-16 px-12">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
                 <CardTitle className="text-lg">Visit Our Bakery</CardTitle>
@@ -107,7 +107,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Phone className="h-8 w-8 text-primary mx-auto mb-2" />
                 <CardTitle className="text-lg">Call Us</CardTitle>
@@ -119,7 +119,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Mail className="h-8 w-8 text-primary mx-auto mb-2" />
                 <CardTitle className="text-lg">Email Us</CardTitle>
@@ -131,7 +131,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
                 <CardTitle className="text-lg">Opening Hours</CardTitle>
@@ -147,7 +147,7 @@ export default function ContactPage() {
           {/* Contact Form and Map */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5" />
@@ -264,7 +264,7 @@ export default function ContactPage() {
             </Card>
 
             {/* Map Section */}
-            <Card className="border hover:border-[#d40000]/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle>Find Us</CardTitle>
                 <p className="text-muted-foreground text-sm">
