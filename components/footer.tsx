@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <Image src="/Cake-logo.png" alt="Cake Wala Logo" width={40} height={40} className="mb-4" />
+              <Image src="/Cake-logo.png" alt="Cake Wala Logo" width={200} height={200} className="mb-4" />
               <p className="text-sm mb-4 text-gray-700">
                 Creating sweet memories since 2015. We specialize in custom cakes and desserts for all your special
                 occasions.
