@@ -68,7 +68,7 @@ export function Header() {
       {/* Main Header */}
       <header className="bg-background border-b border-border sticky top-0 z-50">
         <div className=" mx-auto px-12">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image src="/Cake-logo.png" alt="Cake Wala Logo" className="object-cover" width={200} height={200} />
