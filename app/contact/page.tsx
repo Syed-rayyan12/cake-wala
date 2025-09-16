@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Footer from "@/components/footer"
+import { InnerNavbar } from "@/components/inner-navbar"
 
 const faqs = [
   {
@@ -71,7 +72,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
+      <InnerNavbar/>
       {/* Page Header */}
       <section className="relative bg-secondary py-32 px-4 overflow-hidden">
         <div className="absolute inset-0">
@@ -98,7 +99,7 @@ export default function ContactPage() {
             <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Visit Our Bakery</CardTitle>
+                <CardTitle className="text-lg text-blue-950">Visit Our Bakery</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-muted-foreground">
                 <p>123 Baker Street</p>
@@ -110,7 +111,7 @@ export default function ContactPage() {
             <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Phone className="h-8 w-8 text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Call Us</CardTitle>
+                <CardTitle className="text-lg text-blue-950">Call Us</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-muted-foreground">
                 <p>Main: +44 20 7123 4567</p>
@@ -122,7 +123,7 @@ export default function ContactPage() {
             <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Mail className="h-8 w-8 text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Email Us</CardTitle>
+                <CardTitle className="text-lg text-blue-950">Email Us</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-muted-foreground">
                 <p>General: hello@cakewala.co.uk</p>
@@ -134,7 +135,7 @@ export default function ContactPage() {
             <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Opening Hours</CardTitle>
+                <CardTitle className="text-lg text-blue-950">Opening Hours</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-muted-foreground">
                 <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
@@ -151,7 +152,11 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5" />
+                  <span className="text-blue-950">
+
                   Send us a Message
+                  </span>
+                 
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -256,7 +261,7 @@ export default function ContactPage() {
                     </label>
                   </div>
 
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full ">
                     Send Message
                   </Button>
                 </form>
@@ -266,7 +271,7 @@ export default function ContactPage() {
             {/* Map Section */}
             <Card className="border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
-                <CardTitle>Find Us</CardTitle>
+                <CardTitle className="text-blue-950">Find Us</CardTitle>
                 <p className="text-muted-foreground text-sm">
                   Located in the heart of London, we're easy to reach by tube, bus, or car
                 </p>
@@ -291,7 +296,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl font-serif font-bold text-primary mb-6">Have Questions?</h2>
+              <h2 className="text-3xl font-serif font-bold text-blue-950 mb-6">Have Questions?</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 We're here to help! Browse through our most frequently asked questions or reach out to us directly.
               </p>
@@ -301,7 +306,7 @@ export default function ContactPage() {
                     <Phone className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-medium">Quick Response</p>
+                    <p className="font-medium text-blue-950">Quick Response</p>
                     <p className="text-sm text-muted-foreground">Call us for immediate assistance</p>
                   </div>
                 </div>
@@ -310,7 +315,7 @@ export default function ContactPage() {
                     <Mail className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-medium">Detailed Inquiries</p>
+                    <p className="font-medium text-blue-950">Detailed Inquiries</p>
                     <p className="text-sm text-muted-foreground">Email us for custom orders</p>
                   </div>
                 </div>
@@ -319,7 +324,7 @@ export default function ContactPage() {
                     <MessageSquare className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-medium">Live Chat</p>
+                    <p className="font-medium text-blue-950">Live Chat</p>
                     <p className="text-sm text-muted-foreground">Available during business hours</p>
                   </div>
                 </div>
@@ -328,7 +333,7 @@ export default function ContactPage() {
 
             {/* Right FAQ Accordion */}
             <div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-6">Frequently Asked Questions</h3>
+              <h3 className="text-2xl font-serif font-bold text-blue-950 mb-6">Frequently Asked Questions</h3>
               <Accordion type="single" collapsible className="space-y-2">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-lg px-4">

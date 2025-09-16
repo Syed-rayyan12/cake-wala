@@ -36,7 +36,7 @@ export default function MiniCheesecakes() {
     <section className="w-full py-16 px-12 bg-gray-100">
       <div className="w-full mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">
+        <h2 className="text-3xl font-bold text-blue-950 mb-4">
           Our Best Selling Mini Cheese Cakes
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">

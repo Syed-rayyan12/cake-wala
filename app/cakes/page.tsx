@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input"
 import { Search, Filter } from "lucide-react"
 import Footer from "@/components/footer"
+import { InnerNavbar } from "@/components/inner-navbar"
 
 const allProducts: Product[] = [
   {
@@ -181,6 +182,7 @@ export default function CakesPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <InnerNavbar/>
 
       {/* Page Header */}
       <section className="relative bg-secondary py-32 px-12 overflow-hidden">

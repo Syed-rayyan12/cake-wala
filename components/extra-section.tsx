@@ -8,7 +8,7 @@ const ExtraSection = () => {
         <>
             <section className=" relative grid grid-cols-2 max-md:grid-cols-1 max-m:grid-cols-1  gap-8 items-center px-12 bg-gray-100 py-16 ">
                 <div className="space-y-6">
-                    <h2 className="text-4xl  font-bold text-primary">
+                    <h2 className="text-4xl  font-bold text-blue-950">
                         Celebrate Every Moment
                     </h2>
                     <svg width="150" height="80" xmlns="http://www.w3.org/2000/svg" className='absolute top-2 left-0'>

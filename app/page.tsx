@@ -15,6 +15,7 @@ import CakeFeatures from "@/components/cakeFeatures"
 import AboutFeature from "@/components/aboutFeature"
 import Cupcake from "@/components/cupcake"
 import TreatsSection from "@/components/category"
+import { InnerNavbar } from "@/components/inner-navbar"
 
 const heroSlides = [
   {
@@ -187,6 +188,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <InnerNavbar/>
 
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
@@ -206,7 +208,7 @@ export default function HomePage() {
             priority={index === 0}
           />
           <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex items-center justify-center">
+          {/* <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-balance">
                 {slide.title}
@@ -216,7 +218,7 @@ export default function HomePage() {
                 Explore Our Cakes
               </Button>
             </div>
-          </div>
+          </div> */}
         </Link>
       ))}
 
@@ -261,12 +263,10 @@ export default function HomePage() {
       {/* Featured Products Section */}
       <CakesGrid/>
       <div className="bg-gray-100">
-
-      
       <section className="py-16 px-12">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl  font-serif font-bold text-primary mb-4">Our Signature Cakes</h2>
+            <h2 className="text-4xl  font-bold text-blue-950 mb-4">Our Signature Cakes</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Handcrafted with love, made fresh daily, and designed to make every moment sweeter.
             </p>

@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import Footer from "@/components/footer"
 import JourneySection from "@/components/journey-section"
 import { BadgeCheck, Eye, Gem, GemIcon, ScanEye, Shield, Telescope, TreePalm } from "lucide-react"
+import { InnerNavbar } from "@/components/inner-navbar"
 
 const stats = [
   { number: "10,000+", label: "Happy Customers" },
@@ -62,6 +63,7 @@ export default function page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <InnerNavbar/>
 
       {/* Page Header */}
       <section className="relative bg-secondary py-32 px-4 overflow-hidden">
@@ -89,7 +91,7 @@ export default function page() {
             <div className="relative">
 
 
-              <h2 className="text-3xl font-serif font-bold text-primary mb-6">About Cake Wala</h2>
+              <h2 className="text-3xl font-serif font-bold text-blue-950 mb-6">About Cake Wala</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">Where passion meets perfection in every bite</p>
               <div className="space-y-4 text-foreground leading-relaxed ">
 
@@ -158,7 +160,7 @@ export default function page() {
 
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-6">Our Foundation</h2>
+            <h2 className="text-4xl font-serif font-bold text-blue-950 mb-6">Our Foundation</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               The core principles that guide everything we do at Cake Wala
             </p>
@@ -171,7 +173,7 @@ export default function page() {
                   <Telescope className="text-white" />
                 </span>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-serif font-bold text-blue-950 mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
                 To create extraordinary moments through exceptional cakes that bring families and friends together, one
                 celebration at a time.
@@ -184,7 +186,7 @@ export default function page() {
                   <Eye className="text-white" />
                 </span>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-serif font-bold text-blue-950 mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
                 To be the most beloved bakery brand, known for innovation, quality, and turning every occasion into a
                 sweet memory.
@@ -197,7 +199,7 @@ export default function page() {
                   <Shield className="text-white" />
                 </span>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">Our Promise</h3>
+              <h3 className="text-2xl font-serif font-bold text-blue-950 mb-4">Our Promise</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Every cake is made with love, using the finest ingredients, and delivered with a smile that matches the
                 joy it brings.
@@ -232,7 +234,7 @@ export default function page() {
 
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">Meet Our Master Bakers</h2>
+            <h2 className="text-3xl font-serif font-bold text-blue-950 mb-4">Meet Our Master Bakers</h2>
             <p className="text-muted-foreground">The talented hands behind every delicious creation</p>
           </div>
 
@@ -243,7 +245,7 @@ export default function page() {
                   <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-primary font-medium mb-3">{member.role}</p>
+                <p className="text-blue-950 font-medium mb-3">{member.role}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">{member.description}</p>
               </div>
             ))}
@@ -273,7 +275,7 @@ export default function page() {
 
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-6">Our Values</h2>
+            <h2 className="text-4xl font-serif font-bold text-blue-950 mb-6">Our Values</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               The principles that drive us to create exceptional experiences for every customer
             </p>
@@ -295,7 +297,7 @@ export default function page() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-serif font-bold text-primary mb-3 group-hover:text-primary/80 transition-colors">
+                    <h3 className="text-xl font-serif font-bold text-blue-950 mb-3 group-hover:text-primary/80 transition-colors">
                       {value.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">{value.description}</p>

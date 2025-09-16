@@ -48,7 +48,7 @@ export default function CakeFeatures() {
               <feature.icon size={28} />
             </div>
             <div>
-              <h3 className="text-xl text-center font-semibold text-gray-800">
+              <h3 className="text-xl text-center font-semibold text-blue-950">
                 {feature.title}
               </h3>
               <p className="mt-2 text-gray-600 text-center text-sm leading-relaxed">

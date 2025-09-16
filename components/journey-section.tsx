@@ -126,7 +126,7 @@ export default function JourneySection() {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-primary mb-6">
+          <h2 className="text-4xl font-serif font-bold text-blue-950 mb-6">
             Our Sweet Journey
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -139,7 +139,7 @@ export default function JourneySection() {
           {/* LEFT CONTENT */}
           <div className="space-y-8">
             <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-serif font-bold text-primary mb-4">
+              <h3 className="text-2xl font-serif font-bold text-blue-950 mb-4">
                 A Story of Passion
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -148,11 +148,11 @@ export default function JourneySection() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-primary">2015</div>
+                  <div className="text-2xl font-bold text-blue-950">2015</div>
                   <div className="text-sm text-muted-foreground">Founded</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-primary">10K+</div>
+                  <div className="text-2xl font-bold text-blue-950">10K+</div>
                   <div className="text-sm text-muted-foreground">
                     Happy Customers
                   </div>

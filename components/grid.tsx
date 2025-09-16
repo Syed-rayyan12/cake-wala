@@ -4,22 +4,25 @@ import Image from "next/image";
 export default function CakesGrid() {
 
     const bg = {
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/gap.avif')",
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/gap.avif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       };
-
+      
       const bgs = {
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/sid.avif')",
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/sid.avif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       };
+      
     return (
         <div className="bg-white">
         <section className="max-w-5xl  mx-auto px-4 py-12">
-            <h2 className="text-center text-3xl font-bold text-primary mb-4">
+            <h2 className="text-center text-3xl font-bold text-blue-950 mb-4">
                 Our Creations For Your Celebrations
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">

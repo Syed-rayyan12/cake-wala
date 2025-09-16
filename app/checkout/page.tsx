@@ -13,6 +13,7 @@ import { Separator } from "@/components/ui/separator"
 import { useCartStore } from "@/lib/store"
 import Image from "next/image"
 import { Minus, Plus, Trash2, CreditCard, Truck } from "lucide-react"
+import { InnerNavbar } from "@/components/inner-navbar"
 
 export default function CheckoutPage() {
   const { items, updateQuantity, removeItem, getTotalPrice, clearCart } = useCartStore()
@@ -64,6 +65,7 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
+      <InnerNavbar/>
 
       <div className="container mx-auto px-12 py-8">
         <h1 className="text-3xl font-serif font-bold text-primary mb-8">Checkout</h1>

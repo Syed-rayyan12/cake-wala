@@ -22,7 +22,7 @@ export default function AboutSection() {
                 {/* Right Content */}
                 <div className="bg-gray-100 p-14">
                     <div className="">
-                        <h2 className="text-3xl font-bold text-gray-800">Welcome to Cakes & Bakes</h2>
+                        <h2 className="text-3xl font-bold text-blue-950">Welcome to Cakes & Bakes</h2>
                         <p className="mt-4 text-gray-700 leading-relaxed">
                             Welcome to Cakes & Bakes, the best cake shop in London! Every day we hand bake
                             a variety of cakes, cupcakes, cake slices, and brownies using the highest quality
