@@ -133,7 +133,11 @@ export function Header() {
                   className="text-foreground hover:text-primary flex items-center gap-1"
                 >
                   Cakes
-                  {openMenu === "cakes" ? <X className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                  {openMenu === "cakes" ? (
+                    <X className="w-5 h-5" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5" />
+                  )}
                 </Link>
 
                 <AnimatePresence>
@@ -143,7 +147,10 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-[44px]  -translate-x-1/2 mt-2 w-[1640px] h-[380px] bg-white border border-border py-12 px-6 z-50"
+                      className="absolute top-[44px] mt-2 
+                  left-[219px] -translate-x-1/2 
+             w-[1542px] h-[380px] bg-white border border-border 
+                   py-12 px-6 z-50 shadow-lg"
                     >
                       <div className="max-w-7xl pl-10 mx-auto grid grid-cols-5 gap-6">
                         {Object.entries(cakeCategories).map(([category, items]) => (
@@ -168,6 +175,7 @@ export function Header() {
                 </AnimatePresence>
               </div>
 
+
               {/* Treats Dropdown */}
               <div className="relative">
                 <Link
@@ -189,12 +197,13 @@ export function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-[44px]  -translate-x-1/2 mt-2 w-[1200px]  max-w-[95vw] justify-center  h-[510px] bg-white border border-border p-6 z-50 flex"
+                      className="absolute top-[44px] left-[117px] -translate-x-1/2 
+                    w-[1540px] mt-2   justify-center  h-[510px] bg-white border border-border p-6 z-50 flex"
                     >
                       {/* Left Side - Categories */}
                       <div className="w-1/4 pr-6 border-r overflow-y-auto">
-                        <h3 className="font-semibold text-primary mb-2">Treats</h3>
-                        <ul className="space-y-2">
+                        <h3 className="font-semibold px-12 text-primary mb-2">Treats</h3>
+                        <ul className="space-y-2 px-12">
                           {treatCategories.map((item) => (
                             <li key={item}>
                               <Link
@@ -233,7 +242,7 @@ export function Header() {
               </div>
 
               <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-               Wedding
+                Wedding
               </Link>
               <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
                 Birthday
