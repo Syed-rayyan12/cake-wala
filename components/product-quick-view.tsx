@@ -84,12 +84,12 @@ export function ProductQuickView({ product, open, onOpenChange }: ProductQuickVi
               <div className="space-y-2">
                 <label className="text-sm font-medium">Select Size:</label>
                 <Select value={selectedSize} onValueChange={setSelectedSize}>
-                  <SelectTrigger>
+                  <SelectTrigger className="border-primary/50 cursor-pointer">
                     <SelectValue placeholder="Choose a size" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white">
                     {product.sizes.map((size) => (
-                      <SelectItem key={size.name} value={size.name}>
+                      <SelectItem className="data-[highlighted]:bg-primary " key={size.name} value={size.name}>
                         {size.name} - £{size.price.toFixed(2)}
                       </SelectItem>
                     ))}
